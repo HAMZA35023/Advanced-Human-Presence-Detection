@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera -->
+<html class="client-js" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>MLX90640-D55 Thermal Camera - Waveshare Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ec617a29497e26fde5e8cf0f","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"MLX90640-D55_Thermal_Camera","wgTitle":"MLX90640-D55 Thermal Camera","wgCurRevisionId":89963,"wgRevisionId":89963,"wgArticleId":6140,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["I2C interface"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"MLX90640-D55_Thermal_Camera","wgRelevantArticleId":6140,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={
+"ext.gadget.tabber":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","mediawiki.toc.styles":"ready","skins.tweeki.styles":"ready","skins.tweeki.bootstraptheme.styles":"ready","skins.tweeki.externallinks.styles":"ready","skins.tweeki.awesome.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","ext.FancyBoxThumbs","ext.HighlightjsIntegration","skins.tweeki.messages","skins.tweeki.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/aAdkk0o.php">
+<script async="" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/aAdkk0o(1).php"></script>
+<style>
+pre.code2highlight,pre.nohighlight{  padding:0.5em}code.code2highlight.hljs{  padding:1px 4px}.hljs{display:block;overflow-x:auto;padding:0.5em;background:#1E1E1E;color:#DCDCDC}.hljs-keyword,.hljs-literal,.hljs-symbol,.hljs-name{color:#569CD6}.hljs-link{color:#569CD6;text-decoration:underline}.hljs-built_in,.hljs-type{color:#4EC9B0}.hljs-number,.hljs-class{color:#B8D7A3}.hljs-string,.hljs-meta-string{color:#D69D85}.hljs-regexp,.hljs-template-tag{color:#9A5334}.hljs-subst,.hljs-function,.hljs-title,.hljs-params,.hljs-formula{color:#DCDCDC}.hljs-comment,.hljs-quote{color:#57A64A;font-style:italic}.hljs-doctag{color:#608B4E}.hljs-meta,.hljs-meta-keyword,.hljs-tag{color:#9B9B9B}.hljs-variable,.hljs-template-variable{color:#BD63C5}.hljs-attr,.hljs-attribute,.hljs-builtin-name{color:#9CDCFE}.hljs-section{color:gold}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.hljs-bullet,.hljs-selector-tag,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#D7BA7D}.hljs-addition{background-color:#144212;display:inline-block;width:100%}.hljs-deletion{background-color:#600;display:inline-block;width:100%}
+.fancybox-wrap,.fancybox-skin,.fancybox-outer,.fancybox-inner,.fancybox-image,.fancybox-wrap iframe,.fancybox-wrap object,.fancybox-nav,.fancybox-nav span,.fancybox-tmp{padding:0;margin:0;border:0;outline:none;vertical-align:top}.fancybox-wrap{position:absolute;top:0;left:0;z-index:8020}.fancybox-skin{position:relative;background:#f9f9f9;color:#444;text-shadow:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.fancybox-opened{z-index:8030}.fancybox-opened .fancybox-skin{-webkit-box-shadow:0 10px 25px rgba(0,0,0,0.5);-moz-box-shadow:0 10px 25px rgba(0,0,0,0.5);box-shadow:0 10px 25px rgba(0,0,0,0.5)}.fancybox-outer,.fancybox-inner{position:relative}.fancybox-inner{overflow:hidden}.fancybox-type-iframe .fancybox-inner{-webkit-overflow-scrolling:touch}.fancybox-error{color:#444;font:14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;padding:15px;white-space:nowrap}.fancybox-image,.fancybox-iframe{display:block;width:100%;height:100%}.fancybox-image{max-width:100%;max-height:100%}#fancybox-loading,.fancybox-close,.fancybox-prev span,.fancybox-next span{background-image:url(/w/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_sprite.png?783d4)}#fancybox-loading{position:fixed;top:50%;left:50%;margin-top:-22px;margin-left:-22px;background-position:0 -108px;opacity:0.8;cursor:pointer;z-index:8060}#fancybox-loading div{width:44px;height:44px;background:url(/w/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_loading.gif?c6f1a) center center no-repeat}.fancybox-close{position:absolute;top:-18px;right:-18px;width:36px;height:36px;cursor:pointer;z-index:8040}.fancybox-nav{position:absolute;top:0;width:40%;height:100%;cursor:pointer;text-decoration:none;background:transparent url(/w/extensions/FancyBoxThumbs/modules/fancyBox/source/blank.gif?32547); -webkit-tap-highlight-color:rgba(0,0,0,0);z-index:8040}.fancybox-prev{left:0}.fancybox-next{right:0}.fancybox-nav span{position:absolute;top:50%;width:36px;height:34px;margin-top:-18px;cursor:pointer;z-index:8040;visibility:hidden}.fancybox-prev span{left:10px;background-position:0 -36px}.fancybox-next span{right:10px;background-position:0 -72px}.fancybox-nav:hover span{visibility:visible}.fancybox-tmp{position:absolute;top:-99999px;left:-99999px;visibility:hidden;max-width:99999px;max-height:99999px;overflow:visible !important} .fancybox-lock{overflow:hidden}.fancybox-overlay{position:absolute;top:0;left:0;overflow:hidden;display:none;z-index:8010;background:url(/w/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_overlay.png?77aea)}.fancybox-overlay-fixed{position:fixed;bottom:0;right:0}.fancybox-lock .fancybox-overlay{overflow:auto;overflow-y:scroll} .fancybox-title{visibility:hidden;font:normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;position:relative;text-shadow:none;z-index:8050}.fancybox-opened .fancybox-title{visibility:visible}.fancybox-title-float-wrap{position:absolute;bottom:0;right:50%;margin-bottom:-35px;z-index:8050;text-align:center}.fancybox-title-float-wrap .child{display:inline-block;margin-right:-100%;padding:2px 20px;background:transparent; background:rgba(0,0,0,0.8);-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-shadow:0 1px 2px #222;color:#FFF;font-weight:bold;line-height:24px;white-space:nowrap}.fancybox-title-outside-wrap{position:relative;margin-top:10px;color:#fff}.fancybox-title-inside-wrap{padding-top:10px}.fancybox-title-over-wrap{position:absolute;bottom:0;left:0;color:#fff;padding:10px;background:#000;background:rgba(0,0,0,.8)}
+@media screen {
+	.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;font-size:94%}}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/aAdkk0o(2).php">
+<link rel="stylesheet" href="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/aAdkk0o(3).php">
+<meta name="generator" content="MediaWiki 1.35.5">
+<meta property="og:image" content="https://www.waveshare.com/w/upload/thumb/6/69/MLX90640-D55-Thermal-Camera-3.jpg/1200px-MLX90640-D55-Thermal-Camera-3.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://www.waveshare.com/w/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.waveshare.com/w/opensearch_desc.php" title="Waveshare Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.waveshare.com/w/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Waveshare Wiki Atom feed" href="https://www.waveshare.com/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-MLX90640-D55_Thermal_Camera rootpage-MLX90640-D55_Thermal_Camera skin-tweeki action-view tweeki-animateLayout tweeki-non-advanced tweeki-user-anon" style="margin-bottom: 0px; position: relative;">			<!-- navbar -->
+			<div id="mw-navigation" class="navbar navbar-default navbar-fixed-top navbar-expand-lg fixed-top navbar-light bg-light" role="navigation">
+				<h2>Navigation menu</h2>
+				<div id="mw-head" class="navbar-inner">
+					<div class="container">
+
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<a href="https://www.waveshare.com/wiki/Main_Page" class="navbar-brand"><img src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/Ws-watermark-en.svg" alt="Waveshare Wiki"></a>
+						</div>
+
+						<div id="navbar" class="navbar-collapse collapse">
+													<ul class="nav navbar-nav">
+							<li class="nav"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#" id="n-raspberry-pi" class="dropdown-toggle" data-toggle="dropdown">Raspberry Pi <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523rpi-boards"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Boards" tabindex="-1">Boards/Kits</a></li><li id="n-main_page.2523rpi-displays"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Displays" tabindex="-1">Displays</a></li><li id="n-main_page.2523rpi-cameras"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Cameras" tabindex="-1">Cameras</a></li><li id="n-main_page.2523rpi-expansions"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Expansions" tabindex="-1">Expansions</a></li><li id="n-main_page.2523rpi-laptops"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Laptops" tabindex="-1">All-in-one</a></li><li id="n-main_page.2523rpi-robots"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Robots" tabindex="-1">Robots</a></li><li id="n-main_page.2523rpi-games"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Games" tabindex="-1">Portable Gaming</a></li><li id="n-main_page.2523rpi-acces"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Acces" tabindex="-1">Accessories</a></li><li id="n-main_page.2523android-linux-boards"><a href="https://www.waveshare.com/wiki/Main_Page#Android-Linux-Boards" tabindex="-1">Other Android/Linux Boards</a></li></ul></li><li class="nav"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#" id="n-ai" class="dropdown-toggle" data-toggle="dropdown">AI <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523jetson-ai-boards"><a href="https://www.waveshare.com/wiki/Main_Page#Jetson-AI-Boards" tabindex="-1">Boards/Kits</a></li><li id="n-main_page.2523jetson-ai-displays"><a href="https://www.waveshare.com/wiki/Main_Page#Jetson-AI-Displays" tabindex="-1">Displays</a></li><li id="n-main_page.2523jetson-ai-cameras"><a href="https://www.waveshare.com/wiki/Main_Page#Jetson-AI-Cameras" tabindex="-1">Cameras</a></li><li id="n-main_page.2523jetson-ai-hat"><a href="https://www.waveshare.com/wiki/Main_Page#Jetson-AI-HAT" tabindex="-1">Expansions</a></li><li id="n-main_page.2523jetson-ai-robots"><a href="https://www.waveshare.com/wiki/Main_Page#Jetson-AI-Robots" tabindex="-1">Robots</a></li></ul></li><li class="nav"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#" id="n-displays" class="dropdown-toggle" data-toggle="dropdown">Displays <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523display-lcd-oleds"><a href="https://www.waveshare.com/wiki/Main_Page#Display-LCD-OLEDs" tabindex="-1">LCD/OLED</a></li><li id="n-main_page.2523display-e-paper"><a href="https://www.waveshare.com/wiki/Main_Page#Display-e-Paper" tabindex="-1">e-Paper</a></li></ul></li><li class="nav"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#" id="n-iot" class="dropdown-toggle" data-toggle="dropdown">IoT <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523long-range-wireless-comm"><a href="https://www.waveshare.com/wiki/Main_Page#Long-range-wireless-comm" tabindex="-1">Long Range Wireless</a></li><li id="n-main_page.2523short-range-wireless-comm"><a href="https://www.waveshare.com/wiki/Main_Page#Short-range-wireless-comm" tabindex="-1">Short Range Wireless</a></li><li id="n-main_page.2523wired-communication"><a href="https://www.waveshare.com/wiki/Main_Page#Wired-communication" tabindex="-1">Wired Comm / Converter</a></li><li id="n-main_page.2523misc-cameras-av"><a href="https://www.waveshare.com/wiki/Main_Page#Misc-cameras-av" tabindex="-1">Cameras / Audio / Video</a></li><li id="n-main_page.2523misc-sensor-modules"><a href="https://www.waveshare.com/wiki/Main_Page#Misc-sensor-modules" tabindex="-1">Sensors</a></li><li id="n-main_page.2523misc-servos-motors"><a href="https://www.waveshare.com/wiki/Main_Page#Misc-servos-motors" tabindex="-1">Motors / Servos</a></li><li id="n-main_page.2523misc-other-modules"><a href="https://www.waveshare.com/wiki/Main_Page#Misc-other-modules" tabindex="-1">others</a></li></ul></li><li class="nav"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#" id="n-robotics" class="dropdown-toggle" data-toggle="dropdown">Robotics <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523robotics-cars"><a href="https://www.waveshare.com/wiki/Main_Page#Robotics-cars" tabindex="-1">Mobile Robots</a></li><li id="n-main_page.2523dog-like-robots"><a href="https://www.waveshare.com/wiki/Main_Page#Dog-like-Robots" tabindex="-1">Dog-like Robots</a></li><li id="n-main_page.2523robotics-drivers-sensors"><a href="https://www.waveshare.com/wiki/Main_Page#Robotics-drivers-sensors" tabindex="-1">Drivers / Sensors</a></li><li id="n-main_page.2523robotics-robot-arms"><a href="https://www.waveshare.com/wiki/Main_Page#Robotics-robot-arms" tabindex="-1">Robot Arm / Control</a></li></ul></li><li class="nav"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#" id="n-mcu.252Ffpga" class="dropdown-toggle" data-toggle="dropdown">MCU/FPGA <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523arduino-main-boards"><a href="https://www.waveshare.com/wiki/Main_Page#Arduino-main-boards" tabindex="-1">Arduino</a></li><li id="n-main_page.2523micro.253Abit"><a href="https://www.waveshare.com/wiki/Main_Page#micro:bit" tabindex="-1">micro:bit</a></li><li id="n-main_page.2523mcu.2farm" class="LPC"><a href="https://www.waveshare.com/wiki/Main_Page#MCU.2FARM" tabindex="-1">STM32</a></li><li id="n-main_page.2523fpga"><a href="https://www.waveshare.com/wiki/Main_Page#FPGA" tabindex="-1">FPGA</a></li></ul></li><li class="nav"><a href="https://service.waveshare.com/" id="n-https.253A.252F.252Fservice.waveshare.com" rel="nofollow" target="_blank">Support</a></li><li class="nav"><a href="https://www.klayers.net/" id="n-https.253A.252F.252Fwww.klayers.net.252F" rel="nofollow" target="_blank">IC</a></li>							</ul>
+						
+													<ul class="nav navbar-nav navbar-right">
+							</ul>
+				<form class="navbar-form navbar-right" action="https://www.waveshare.com/w/index.php" id="searchform">
+					<div class="form-group"><input type="search" name="search" placeholder="Product name search" title="Search Waveshare Wiki [alt-shift-f]" accesskey="f" id="searchInput" class="search-query form-control"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="mw-searchButton" class="searchButton btn hidden">
+					</div>
+				</form><ul class="nav navbar-nav navbar-right">							</ul>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- /navbar -->
+					<div id="mw-page-base"></div>
+			<div id="mw-head-base"></div>
+			<a id="top"></a>
+
+			<!-- content -->
+			<div id="contentwrapper" class="user-loggedout not-editable container with-navbar with-navbar-fixed">
+
+				
+				<div class="row">
+					<div class="col-md-offset-2 col-md-10" role="main">
+								<div class="mw-body" id="content">
+			<div id="mw-js-message" style="display:none;"></div>
+									<h1 id="firstHeading" class="firstHeading page-header" lang="en"><span dir="auto">MLX90640-D55 Thermal Camera</span></h1>
+									<!-- bodyContent -->
+			<div id="bodyContent">
+								<div id="siteSub">From Waveshare Wiki</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#mw-navigation">navigation</a>, 					<a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="wiki-pages jet-green-color">
+<table class="a-r at-c roundy bgd-green bl-white" style="margin-left: 5px; margin-bottom: 5px; width: 30%;">
+
+<tbody><tr>
+<td>
+<table class="at-c roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>MLX90640-D55 Thermal Camera</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><a href="https://www.waveshare.com/mlx90640-d55-thermal-camera.htm" target="_blank" rel="nofollow noreferrer noopener"><img alt="MLX90640-D55-Thermal-Camera" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/400px-MLX90640-D55-Thermal-Camera-3.jpg" decoding="async" loading="lazy" width="400" height="300" srcset="/w/upload/thumb/6/69/MLX90640-D55-Thermal-Camera-3.jpg/600px-MLX90640-D55-Thermal-Camera-3.jpg 1.5x, /w/upload/thumb/6/69/MLX90640-D55-Thermal-Camera-3.jpg/800px-MLX90640-D55-Thermal-Camera-3.jpg 2x"></a><br><br><small>MLX90640 IR Array Thermal Imaging Camera, 32×24 Pixels, 55° Field of View, I2C Interface</small>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name2}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name3}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name4}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name5}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name6}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="roundy" style="display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Primary Attribute
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-c roundytl roundytr bgwhite b-green" style="border-width: 0 0 1px 0;"><b>Category:</b>
+</td></tr>
+<tr style="display:none;">
+<th colspan="3" width="90px" class="at-r bgwhite b-green" style="border-width: 0 0 1px 0;">{{{userDefinedInfo}}}:
+</th>
+<td colspan="3" class="at-l b-green bgwhite" style="border-width: 0 0 1px 0;">{{{userdefinedvalue}}}
+</td></tr>
+<tr style="display:none;">
+<td colspan="6" width="90px" class="at-c roundybl roundybr bgwhite"><b>Brand:</b> Waveshare
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="a-r roundy" style="display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Website
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-c roundytl roundytr bgwhite b-green" style="border-width: 0 0 1px 0;"><b>International:</b> <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/">Waveshare website</a>
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-c roundybl roundybr bgwhite"><b>Chinese:</b> <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://www.waveshare.net/">中文网站</a>
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="a-r roundy" style="background: transparent; border-collapse:collapse;width:100%;display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Onboard Interfaces
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-l roundy bgwhite b-green" style="border-width: 0 0 1px 0;">
+<table class="roundy bgwhite fulltable" style="text-align:center;">
+
+<tbody><tr>
+<td class="roundy bl-gray bw-1" style="width:25%;;"><small><b><a href="https://www.waveshare.com/wiki/Category:I2C_interface" title="Category:I2C interface">I2C</a></b></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="a-r roundy" style="background: transparent; border-collapse:collapse;width:100%;;display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Related Products
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-l roundy bgwhite b-green" style="border-width: 0 0 1px 0;">
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+<h1><span class="mw-headline" id="Overview">Overview</span></h1>
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>This is a 32 × 24 pixel, 55° field of view, IR array thermal imaging camera, communicating via the I2C interface. It is compatible with 3.3V/5V operating voltage and supports host platforms such as Raspberry Pi/Arduino(ESP32)/STM32, etc. With MLX90640 far-infrared thermal sensor array, it can accurately detect target objects in specific regions and temperature ranges, and a small size for easy integration into miscellaneous industrial or intelligent control applications.
+</p>
+<h3><span class="mw-headline" id="Features">Features</span></h3>
+<ul><li>Adopts MLX90640 far-infrared thermal sensor array, 32 × 24 pixels.</li>
+<li>Communicating via I2C interface, configurable to fast mode (up to 1MHz data rate).</li>
+<li>Noise Equivalent Temperature Difference (NETD) 0.1K RMS @1Hz refresh rate.</li>
+<li>Onboard voltage translator, compatible with 3.3V/5V operating voltage.</li>
+<li>Comes with online development resources and manual (examples for Raspberry Pi/Arduino(ESP32)/STM32).</li></ul>
+<h3><span class="mw-headline" id="Specification">Specification</span></h3>
+<ul><li>Operating voltage: 3.3V/5V</li>
+<li>Operating current: ＜23mA</li>
+<li>Communication interface: I2C (address 0x33)</li>
+<li>Field of view (Horizontal × Vertical):
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/mlx90640-d55-thermal-camera.htm">MLX90640-D55 Thermal Camera</a>:  55°× 35° (narrow angle FOV, for long-range measuring)</li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/MLX90640-D110-Thermal-Camera.htm">MLX90640-D110 Thermal Camera</a>: 110°× 75° (wide angle FOV, for short-range measuring)</li></ul></li>
+<li>Operating temperature: -40℃～85℃</li>
+<li>Target temperature: -40℃～300℃</li>
+<li>Resolution: ±1℃</li>
+<li>Refresh rate: 0.5Hz~64Hz (programmable)</li>
+<li>Dimensions: 28mm × 16 mm</li>
+<li>Mounting hole size: 2.0mm</li></ul>
+<h2><span class="mw-headline" id="Hardware_Description">Hardware Description</span></h2>
+<p><a href="https://www.waveshare.com/wiki/File:MLX90640_05.jpg" class="image fancybox"><img alt="MLX90640 05.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640_05.jpg" decoding="async" loading="lazy" width="800" height="600"></a>
+</p>
+<h3><span class="mw-headline" id="Hardware_Connection">Hardware Connection</span></h3>
+<p>The MLX9064x-Dxx Thermal Camera has 4 pins that need to be connected to the controller and currently supports the Raspberry Pi series, STM32F405R and ESP32 series. For details, please refer to the instruction section.
+</p>
+<h3><span class="mw-headline" id="Interface">Interface</span></h3>
+<p>In the figure above, the MLX9064x-Dxx Thermal Camera has an onboard level shifter circuit.
+</p>
+<ul><li>VCC, GND pin for the power supply, VCC connected to the control 3.3V or 5V power supply, GND corresponds to the connection of the GND.</li>
+<li>SDA is the data pin of I2C, connected to the GPIO of the controller, without an external pull-up resistor.</li>
+<li>SCL is the clock pin of I2C, connected to the GPIO of the controller, without an external pull-up resistor.</li></ul>
+<h3><span class="mw-headline" id="Application">Application</span></h3>
+<ul><li>High-precision non-contact object temperature detection.</li>
+<li>Infrared thermal imager, infrared thermometer.</li>
+<li>Smart Home, Smart Building, Smart Lighting.</li>
+<li>Industrial temperature control, security, intrusion/motion detection.</li></ul>
+<h2><span class="mw-headline" id="Communication_Protocol">Communication Protocol</span></h2>
+<p>The communication protocol of MLX90640-D55 Thermal Camera is I2C, which supports I2C high-speed mode (up to 1MHz), and can only be used as a slave device on the I2C bus. The SDA and SCL ports can withstand 5V voltage and can be directly connected to the 5V I2C bus, the device address of the module can be programmed, there can be up to 127 addresses, and the factory default value is 0x33. Like the general I2C bus, there are three types of signals in the process of data transmission: start signal, end signal and response signal.<br>
+<a href="https://www.waveshare.com/wiki/File:MLX90640-D55_Thermal_Camera_020.jpg" class="image fancybox"><img alt="MLX90640-D55 Thermal Camera 020.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640-D55_Thermal_Camera_020.jpg" decoding="async" loading="lazy" width="700" height="221"></a><br>
+Start signal: SCL is high level, SDA is converted from high level to low level.<br>
+End signal: SCL is high level, SDA is converted from low level to high level.<br>
+It can be seen that the start signal and the end signal are completed when the SCL bus is high.<br>
+<a href="https://www.waveshare.com/wiki/File:MLX90640-D55_Thermal_Camera_021.jpg" class="image fancybox"><img alt="MLX90640-D55 Thermal Camera 021.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640-D55_Thermal_Camera_021.jpg" decoding="async" loading="lazy" width="700" height="329"></a><br>
+Response signal: During the 9th clock period after each byte transmission, the sending data end device releases the SDA bus, and the receiving data end device pulls down the SDA bus to indicate that bytes are received (ACK), or the SDA bus is high level with no acknowledgment (NoACK).<br>
+</p>
+<dl><dd><a href="https://www.waveshare.com/wiki/File:MLX90640_Thermal_Camera_manual-1.png" class="image fancybox"><img alt="MLX90640 Thermal Camera manual-1.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640_Thermal_Camera_manual-1.png" decoding="async" loading="lazy" width="984" height="346"></a><br></dd></dl>
+<p>Device Address: The master addresses the slave by sending a 7-bit slave address after a START condition. The first seven bits are dedicated to this address, and the 8th is the read/write (R/W) bit. This bit indicates the transfer direction, The high level means that the master will read data from the slave, and the low level means that the master will send data to the slave.<br>
+</p>
+<dl><dd><a href="https://www.waveshare.com/wiki/File:MLX90640_Thermal_Camera_manual-2.png" class="image fancybox"><img alt="MLX90640 Thermal Camera manual-2.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640_Thermal_Camera_manual-2.png" decoding="async" loading="lazy" width="537" height="817"></a></dd></dl>
+<p>The MLX90640-D55 Thermal Camera consists of a total of 768 IR sensors (also called pixels). The row and column positions of each pixel are identified as Pixel(i, j), where i is its row number (from 1 to 24), and j is its column number (from 1 to 32), the pixel specific to a certain plane can refer to the above figure.
+</p>
+<ul><li>It should be noted that <font color="red">the original sensor is allowed to have less than 4 dead points when the sensor leaves the factory</font>, and each dead point is marked in the EEPROM table, so the module may have a certain probability of dead points, that is to say, this cannot be used as a basis for return or exchange. The original recommendation for this is to use the average value of adjacent pixels instead.</li></ul>
+<h2><span class="mw-headline" id="Dimensions">Dimensions</span></h2>
+<p><a href="https://www.waveshare.com/wiki/File:MLX90640_Dimension.jpg" class="image fancybox"><img alt="MLX90640 Dimension.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640_Dimension.jpg" decoding="async" loading="lazy" width="900" height="504"></a>
+</p>
+<h2><span class="mw-headline" id="Other_Description">Other Description</span></h2>
+<ul><li>The MLX9064x-Dxx Thermal Camera utilizes thermopile technology, consisting of a total of 768 IR sensors. Each IR sensor is treated as a pixel. The row and column positions of each pixel in the field of view of the MLX9064x-Dxx Thermal Camera are identified as Pixel(i, j), where i represents its row number (ranging from 1 to 24), and j represents its column number (ranging from 1 to 32).</li>
+<li>The sensor manufacturer allows for up to <font color="#FF0000">4 defective pixels at the time of sensor production</font>. Each defective pixel is identified in the EEPROM table. As a result, there is a possibility that the module may have some defective pixels. This means that the presence of defective pixels cannot be used as a basis for returning or exchanging the product. The manufacturer's recommendation for addressing this issue is to use the average value of adjacent pixels as a replacement.</li></ul>
+<h2><span class="mw-headline" id="Memory_and_registers">Memory and registers</span></h2>
+<dl><dd><a href="https://www.waveshare.com/wiki/File:MLX90640_Thermal_Camera_manual-3.png" class="image fancybox"><img alt="MLX90640 Thermal Camera manual-3.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640_Thermal_Camera_manual-3.png" decoding="async" loading="lazy" width="410" height="516"></a><br></dd></dl>
+<p>The above picture shows the distribution of RAM area and control registers of MLX90640, in which there are two data modes in RAM area, and EEPROM is used to store calibration constants and device configuration parameters, as shown in the following figure:<br>
+</p>
+<dl><dd><a href="https://www.waveshare.com/wiki/File:MLX90640_Thermal_Camera_manual-4.png" class="image fancybox"><img alt="MLX90640 Thermal Camera manual-4.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640_Thermal_Camera_manual-4.png" decoding="async" loading="lazy" width="989" height="743"></a></dd></dl>
+<h3><span class="mw-headline" id="Refresh_rate">Refresh rate</span></h3>
+<p>This module support 8 kinds of refresh rate, up to 64Hz. The refresh rate is controlled by the control register 1 (0x800D), as shown below:
+</p>
+<dl><dd><a href="https://www.waveshare.com/wiki/File:MLX90640_Thermal_Camera_manual-6.png" class="image fancybox"><img alt="MLX90640 Thermal Camera manual-6.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640_Thermal_Camera_manual-6.png" decoding="async" loading="lazy" width="970" height="720"></a><br></dd></dl>
+<p>The settings of the 8 refresh rates are determined by bit 7, bit 8 and bit 9 of the control register 1 (0x800D), among which there are Chess mode (factory default setting) and TV interleave mode, as shown below:<br>
+</p>
+<dl><dd><a href="https://www.waveshare.com/wiki/File:MLX90640_Thermal_Camera_manual-7.png" class="image fancybox"><img alt="MLX90640 Thermal Camera manual-7.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640_Thermal_Camera_manual-7.png" decoding="async" loading="lazy" width="1027" height="473"></a><br></dd></dl>
+<p><br>
+</p>
+<dl><dd><a href="https://www.waveshare.com/wiki/File:MLX90640_Thermal_Camera_manual-8.png" class="image fancybox"><img alt="MLX90640 Thermal Camera manual-8.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640_Thermal_Camera_manual-8.png" decoding="async" loading="lazy" width="1011" height="415"></a></dd></dl>
+<p>The two modes differ in the way subpages are updated. As a standard the MLX90640 is calibrated in Chess pattern mode, this results in better fixed pattern noise behavior of the sensor when in Chess pattern mode. For best results, we advise to use Chess pattern mode. The setting of both modes depends on bit 12 in “Control register 1” (0x800D).
+</p>
+<h2><span class="mw-headline" id="Temperature_measurement_principle_and_measurement_distance">Temperature measurement principle and measurement distance</span></h2>
+<h3><span class="mw-headline" id="Temperature_measurement_principle">Temperature measurement principle</span></h3>
+<p>What is infrared temperature measurement?(quoted from <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.optris.com/infrared-basics">OPTRIS</a>).
+</p><p>Next to time, temperature is the most frequently measured physical property. Infrared temperature measurement devices define the temperature according to the radiation law of Planck and Boltzmann through infrared radiation released by the measured object. But how does non-contact temperature measurement work?
+</p><p>Each body, with a temperature above the absolute zero (0 K or -273.15°C) emits an electromagnetic radiation from its surface, which is proportional to its intrinsic temperature. A part of this radiation is infrared radiation which is used to measure temperature. The radiation of the body penetrates the atmosphere and can be focused on a detector element with the help of a lens. The detector element generates an electrical signal proportional to the radiation. This signal is amplified and, using successive digital signal processing, is transformed into an output signal proportional to the object temperature. The measuring value can be shown on a display or released as a signal. 
+</p><p>The emissivity ε (Epsilon) has a central importance, if the temperature is measured through radiation. The emissivity defines the relation of the radiation value in real and of the black body. This is maximal 1 for a black body. But only few bodies meet the ideal of the black body. For the calibration of sensors, the contact faces of radiators are generally used, which consists of the favoured wave length of 0.99.
+</p><p>Many bodies have a constant emissivity regarding the wave length, but do emit far less radiation than black bodies. They are called grey bodies. Bodies whose emissivity depends on the temperature and the wave length, such as metals, are called selective radiator. The missing radiation part is compensated in both cases through the definition of emissivity. When using a selective radiator, one needs to bear in mind the measured wave length (short-wave for metal).
+</p><p>The infrared sensor receives the emitted radiation from the object surface, but also reflected radiation form the surroundings and perhaps penetrated infrared radiation from the measuring object.
+</p>
+<h3><span class="mw-headline" id="Measurement_distance">Measurement distance</span></h3>
+<p>The FOV of this module is determined by 50% radiation signal which is received by the thermopile, it is also influenced by the main axis of the sensor. The temperature measured is the weighted average of the detected object's temperature in FOV. To improve the accuracy, you should make sure that the detected object is in the FOV totally.
+</p>
+<dl><dd><a href="https://www.waveshare.com/wiki/File:MLX90640-D55_Thermal_Camera_030.jpg" class="image fancybox"><img alt="MLX90640-D55 Thermal Camera 030.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/500px-MLX90640-D55_Thermal_Camera_030.jpg" decoding="async" loading="lazy" width="500" height="272" srcset="/w/upload/thumb/e/ee/MLX90640-D55_Thermal_Camera_030.jpg/750px-MLX90640-D55_Thermal_Camera_030.jpg 1.5x, /w/upload/thumb/e/ee/MLX90640-D55_Thermal_Camera_030.jpg/1000px-MLX90640-D55_Thermal_Camera_030.jpg 2x"></a></dd></dl>
+<p>For the relationship between the measurement distance and the field of view, please refer to the calculation formula shown in the following figure mentioned by <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.melexis.com/en/product/MLX90640/Far-Infrared-Thermal-Sensor-Array">Melexis</a>.<br>
+<a href="https://www.waveshare.com/wiki/File:MLX90640-D55_Thermal_Camera_036.jpg" class="image fancybox"><img alt="MLX90640-D55 Thermal Camera 036.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640-D55_Thermal_Camera_036.jpg" decoding="async" loading="lazy" width="870" height="942"></a>
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<h3><span class="mw-headline" id="Raspberry_Pi_4B">Raspberry Pi 4B</span></h3>
+<h4><span class="mw-headline" id="Hardware_Connection_2">Hardware Connection</span></h4>
+<dl><dd><div class="thumb tright"><div class="thumbinner" style="width:402px;"><a href="https://www.waveshare.com/wiki/File:MLX90640-D55_Thermal_Camera_031.jpg" class="image fancybox"><img alt="MLX90640-D55 Thermal Camera 031.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/400px-MLX90640-D55_Thermal_Camera_031.jpg" decoding="async" loading="lazy" width="400" height="376" class="thumbimage" srcset="/w/upload/thumb/7/77/MLX90640-D55_Thermal_Camera_031.jpg/600px-MLX90640-D55_Thermal_Camera_031.jpg 1.5x, /w/upload/thumb/7/77/MLX90640-D55_Thermal_Camera_031.jpg/800px-MLX90640-D55_Thermal_Camera_031.jpg 2x"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://www.waveshare.com/wiki/File:MLX90640-D55_Thermal_Camera_031.jpg" class="internal" title="Enlarge"></a></div></div></div></div></dd></dl>
+<p><font size="4" color="#Ff0000"><b>1. When using the sensor, please pay attention to avoiding direct contact with the onboard IC devices in your hands. Pay attention to preventing static electricity and checking the power supply to prevent reverse connection before powering on.</b></font>
+</p>
+<p><font size="4" color="#Ff0000"><b>2. When the sensor is working, please avoid excessive vibration and do not plug or unplug cables. Since MLX90640 has EEPROM, it will easily be damaged by vibration and a hot plug. Do not use too long cables for communication, which may cause EEPROM writing errors and failure.</b></font></p>
+<table border="1;" style="width:400px">
+
+<tbody><tr style="background:#7eb128; color:white;" align="center">
+<td>Pi-4B</td>
+<td>MLX90640 Thermal Camera
+</td></tr>
+<tr>
+<td>5V</td>
+<td>5V
+</td></tr>
+<tr>
+<td>GND</td>
+<td>GND
+</td></tr>
+<tr>
+<td>SDA(BCM2)</td>
+<td>SDA
+</td></tr>
+<tr>
+<td>SCL(BCM3)</td>
+<td>SCL
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Environment_Setting">Environment Setting</span></h3>
+<ul><li>It is recommended to use an image with the library installed for testing, and the use of mirrors for testing, please ignore the following environment settings and other operations.</li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://drive.google.com/file/d/1scgWyG6iaKrkB12Huc698ZVpczvIZNZl/view?usp=drive_link">Raspberry Pi Drive-Google Drive</a>, the image account and password both are "test".</li>
+<li>Enable the Raspberry Pi I2C bus, and reboot it after setting. It is recommended to reboot after setting the next step.</li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:Thermal_Camera_HAT_Use03.jpg" class="image fancybox"><img alt="Thermal Camera HAT Use03.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/Thermal_Camera_HAT_Use03.jpg" decoding="async" loading="lazy" width="900" height="705"></a><br>
+</p>
+<ul><li>Adjust the I2C rate, and add the speed parameter in the /boot/config.txt file. Reboot to take effect after changing. The commands are as shown below:</li></ul>
+<pre>sudo nano /boot/config.txt
+dtparam=i2c_arm=on,i2c_arm_baudrate=400000
+</pre>
+<ul><li>If you want to install library and download the C/C++ example demo by yourself, you can refer to the following commands:</li></ul>
+<pre>cd ~
+wget https://files.waveshare.com/upload/5/57/Mlx90640-thermal_camera.zip
+unzip Mlx90640_thermal_camera.zip
+cd mlx90640_thermal_camera/RaspberryPi/cpp/
+chmod +x install.sh
+sudo ./install.sh
+</pre>
+<ul><li>If you install library and download the Python example demo by yourself, you can refer to the following commands:</li></ul>
+<pre>sudo apt update
+pip3 install opencv-python==4.6.0.66
+pip3 install pithermalcam
+sudo apt-get install libatlas-base-dev
+</pre>
+<h4><span id="C/C++_Example"></span><span class="mw-headline" id="C.2FC.2B.2B_Example">C/C++ Example</span></h4>
+<ul><li>Input the following commands in the Raspberry Pi terminal and execute the example program, the effect is shown below:</li></ul>
+<pre>make
+sudo ./main
+#If you are using Windodws MSTSC to log in remotely, you will need to use the following commands:
+sudo -E ./main
+</pre>
+<p><a href="https://www.waveshare.com/wiki/File:MLX90640_Thermal_Camera_-02.jpg" class="image fancybox"><img alt="MLX90640 Thermal Camera -02.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640_Thermal_Camera_-02.jpg" decoding="async" loading="lazy" width="900" height="783"></a>
+</p>
+<h4><span class="mw-headline" id="Python_Example">Python Example</span></h4>
+<ul><li>Thanks to <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://github.com/tomshaffner/PiThermalCam">pithermalcam opern-source code</a>, you can install it referring to <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://tomshaffner.github.io/PiThermalCam/#software-setup">this link</a>.</li>
+<li>Input the following commands in the Raspberry Pi terminal to execute the sample demo. After the execution of the local network video streaming example, other mobile devices or computers open the browser to enter the Raspberry Pi terminal to print the information, the effect is shown in the following figure:</li></ul>
+<pre>python3
+import pithermalcam as ptc
+# Example of performing local network video push streaming
+ptc.stream_camera_online()
+# Example of executing real-time video streaming display, and reference terminal printing information operation
+ptc.display_camera_live()
+</pre>
+<p><a href="https://www.waveshare.com/wiki/File:MLX90640_-03.jpg" class="image fancybox"><img alt="MLX90640 -03.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640_-03.jpg" decoding="async" loading="lazy" width="900" height="491"></a>
+</p>
+<h3><span class="mw-headline" id="STM32">STM32</span></h3>
+<h4><span class="mw-headline" id="Hardware_Connection_3">Hardware Connection</span></h4>
+<dl><dd><div class="thumb tright"><div class="thumbinner" style="width:402px;"><a href="https://www.waveshare.com/wiki/File:MLX90640-D55_Thermal_Camera_032.jpg" class="image fancybox"><img alt="MLX90640-D55 Thermal Camera 032.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/400px-MLX90640-D55_Thermal_Camera_032.jpg" decoding="async" loading="lazy" width="400" height="256" class="thumbimage" srcset="/w/upload/thumb/5/51/MLX90640-D55_Thermal_Camera_032.jpg/600px-MLX90640-D55_Thermal_Camera_032.jpg 1.5x, /w/upload/thumb/5/51/MLX90640-D55_Thermal_Camera_032.jpg/800px-MLX90640-D55_Thermal_Camera_032.jpg 2x"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://www.waveshare.com/wiki/File:MLX90640-D55_Thermal_Camera_032.jpg" class="internal" title="Enlarge"></a></div></div></div></div></dd></dl>
+<p><font size="4" color="#Ff0000"><b>1. When using the sensor, please pay attention to avoiding direct contact with the onboard IC devices in your hands. Pay attention to preventing static electricity and checking the power supply to prevent reverse connection before powering on.</b></font>
+</p>
+<p><font size="4" color="#Ff0000"><b>2. When the sensor is working, please avoid excessive vibration and do not plug or unplug cables. Since the MLX90640 has EEPROM, it will easily damaged by vibration and hot plug. Do not use too long cables for communication, which may cause EEPROM writing errors and failure.</b></font></p>
+<table border="1;" style="width:400px">
+
+<tbody><tr style="background:#7eb128; color:white;" align="center">
+<th>STM32</th>
+<th>MLX90640 Thermal Camera
+</th></tr>
+<tr>
+<td>5V</td>
+<td>5V
+</td></tr>
+<tr>
+<td>GND</td>
+<td>GND
+</td></tr>
+<tr>
+<td>SDA(PB11)</td>
+<td>SDA
+</td></tr>
+<tr>
+<td>SCL(PB10)</td>
+<td>SCL
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="ESP32">ESP32</span></h3>
+<h4><span class="mw-headline" id="Hardware_Connection_4">Hardware Connection</span></h4>
+<dl><dd><div class="thumb tright"><div class="thumbinner" style="width:402px;"><a href="https://www.waveshare.com/wiki/File:MLX90640-D55_Thermal_Camera_034.jpg" class="image fancybox"><img alt="MLX90640-D55 Thermal Camera 034.jpg" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/400px-MLX90640-D55_Thermal_Camera_034.jpg" decoding="async" loading="lazy" width="400" height="280" class="thumbimage" srcset="/w/upload/thumb/8/84/MLX90640-D55_Thermal_Camera_034.jpg/600px-MLX90640-D55_Thermal_Camera_034.jpg 1.5x, /w/upload/thumb/8/84/MLX90640-D55_Thermal_Camera_034.jpg/800px-MLX90640-D55_Thermal_Camera_034.jpg 2x"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://www.waveshare.com/wiki/File:MLX90640-D55_Thermal_Camera_034.jpg" class="internal" title="Enlarge"></a></div></div></div></div></dd></dl>
+<p><font size="4" color="#Ff0000"><b>1. When using the sensor, please pay attention to avoiding direct contact with the onboard IC devices by your hands, Pay attention to preventing static electricity, and checking the power supply to prevent reverse connection before powering on.</b></font>
+</p>
+<p><font size="4" color="#Ff0000"><b>2. When the sensor is working, please avoid excessive vibration and do not plug or unplug cables. Since the MLX90640 has EEPROM, it will easily be damaged by vibration and hot plug. Do not use too long cables for communication, which may cause EEPROM writing errors and failure.</b></font></p>
+<table border="1;" style="width:400px">
+
+<tbody><tr style="background:#7eb128; color:white;" align="center">
+<th>ESP32</th>
+<th>MLX90640 Thermal Camera
+</th></tr>
+<tr>
+<td>5V</td>
+<td>5V
+</td></tr>
+<tr>
+<td>GND</td>
+<td>GND
+</td></tr>
+<tr>
+<td>SDA(P21)</td>
+<td>SDA
+</td></tr>
+<tr>
+<td>SCL(P22)</td>
+<td>SCL
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Software_Installation">Software Installation</span></h4>
+<p><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Arduino_ESP32.2F8266_Online_Installation">#Arduino ESP32/8266 Online Installation</a>
+</p>
+<h4><span class="mw-headline" id="Operating_Steps">Operating Steps</span></h4>
+<ul><li>Download <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/5/57/Mlx90640-thermal_camera.zip">the demo</a>.</li>
+<li>Unzip it, enter the following directory, double-click MLX90640_Thermal_Camera.ino file. <br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:MLX90640-1.png" class="image fancybox"><img alt="MLX90640-1.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/500px-MLX90640-1.png" decoding="async" loading="lazy" width="500" height="208" srcset="/w/upload/8/8e/MLX90640-1.png 1.5x"></a><br>
+</p>
+<ul><li>Click Tools to select the development board and port.<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:MLX90640-2.png" class="image fancybox"><img alt="MLX90640-2.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/500px-MLX90640-2.png" decoding="async" loading="lazy" width="500" height="279" srcset="/w/upload/thumb/4/4c/MLX90640-2.png/750px-MLX90640-2.png 1.5x, /w/upload/thumb/4/4c/MLX90640-2.png/1000px-MLX90640-2.png 2x"></a><br>
+</p>
+<ul><li>Click the arrow to upload.<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:MLX90640-3.png" class="image fancybox"><img alt="MLX90640-3.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640-3.png" decoding="async" loading="lazy" width="500" height="294"></a><br>
+</p>
+<ul><li>After uploading, click Serial Monitor to view the output.<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:MLX90640-4.png" class="image fancybox"><img alt="MLX90640-4.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/500px-MLX90640-4.png" decoding="async" loading="lazy" width="500" height="220" srcset="/w/upload/thumb/d/df/MLX90640-4.png/750px-MLX90640-4.png 1.5x, /w/upload/d/df/MLX90640-4.png 2x"></a><br>
+<a href="https://www.waveshare.com/wiki/File:MLX90640-5.png" class="image fancybox"><img alt="MLX90640-5.png" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/500px-MLX90640-5.png" decoding="async" loading="lazy" width="500" height="402" srcset="/w/upload/thumb/d/d1/MLX90640-5.png/750px-MLX90640-5.png 1.5x, /w/upload/d/d1/MLX90640-5.png 2x"></a><br>
+</p>
+<h1><span class="mw-headline" id="Resources">Resources</span></h1>
+<h2><span class="mw-headline" id="Documents">Documents</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/8/84/MLX90640_Thermal_Camera_SchDoc.pdf">Schematic</a></li></ul>
+<h2><span class="mw-headline" id="Demo_codes">Demo codes</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/5/57/Mlx90640-thermal_camera.zip">Demo codes</a></li></ul>
+<h2><span class="mw-headline" id="Software">Software</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/b/b3/Sscom5.13.1.zip">Sscom5.13.1</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/6/62/CP210x_USB_TO_UART.zip">CP210x USB TO UART</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/d/d7/Panasonic_SDFormatter.zip">Panasonic SDFormatter</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/7/76/Win32DiskImager.zip">Win32DiskImager </a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://drive.google.com/file/d/1scgWyG6iaKrkB12Huc698ZVpczvIZNZl/view?usp=drive_link">Raspberry Pi Image-Google Drive</a></li></ul>
+<h2><span class="mw-headline" id="Datasheet">Datasheet</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/7/73/MLX90640-EN.pdf">MLX90640 Datasheet</a></li></ul>
+<h1><span class="mw-headline" id="FAQ">FAQ</span></h1>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#accordion1">
+								<b>Question:</b>How far is the measurement distance of the MLX90640-D55 Thermal Camera? What is the maximum supported frame rate?
+							</a>
+						</h4>
+					</div>
+					<div id="accordion1" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>The official device manual does not give the measurement distance parameters. The test result of Waveshare Electronics is that when the indoor temperature is 22°C and the light is dim, the tester with a height of 178cm starts to wave at 1 meter away from the MLX90640-D55 Thermal Camera, and steps back to 11 meters, the MLX90640-D55 Thermal Camera captures the focus disappears, and the body contour cannot be recognized after 5 meters (about) away from the lens of MLX90640-D55 Thermal Camera. MLX90640-D55 Thermal Camera supports a maximum frame rate of 32Hz.<br>
+<a href="https://www.waveshare.com/wiki/File:MLX90640-D55_Thermal_Camera_001.gif" class="image fancybox"><img alt="MLX90640-D55 Thermal Camera 001.gif" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/MLX90640-D55_Thermal_Camera_001.gif" decoding="async" loading="lazy" width="244" height="352"></a><br>
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#accordion2">
+								<b>Question:</b>How far is the measurement distance of the MLX90640-D110 Thermal Camera? What is the maximum supported frame rate?
+
+							</a>
+						</h4>
+					</div>
+					<div id="accordion2" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>The official device manual does not give the measurement distance parameters. The test result of Waveshare Electronics is that the indoor temperature is 22°C and the light is dim. The tester with a height of 178cm starts to wave at 1 meter away from the MLX90640-D110 Thermal Camera and back to 9 meters. After the MLX90640 -D110 Thermal Camera captures the focus disappears, and when the lens is 2 meters away from the MLX90640-D110 Thermal Camera (about 2 meters), the silhouette of the human body cannot be recognized. The MLX90640-D110 Thermal Camera supports a maximum frame rate of 32Hz.
+<p><a href="https://www.waveshare.com/wiki/File:Thermal_camera.gif" class="image fancybox"><img alt="Thermal camera.gif" src="./MLX90640-D55 Thermal Camera - Waveshare Wiki_files/Thermal_camera.gif" decoding="async" loading="lazy" width="244" height="352"></a><br>
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#accordion3">
+								<b>Question:</b>I was wondering what range of IR wavelengths?
+
+							</a>
+						</h4>
+					</div>
+					<div id="accordion3" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>The wavelength is 5.5 to 14um.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#accordion4">
+								<b>Question:</b>I am working on a project that involves detecting moving people from a range of 40m. What is the range of this thermal camera and would it be a viable option for this type of project?
+
+							</a>
+						</h4>
+					</div>
+					<div id="accordion4" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>This module can not used in short distances from 1m to 9m.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<h1><span class="mw-headline" id="Support">Support</span></h1>
+<p><br>
+<br>
+</p>
+<div style="background:linear-gradient(to bottom right,#91C942,#7DB036); border-radius:15px; width:100%;min-width:750px;">
+<div style="display:flex;flex-direction: row;align-items: flex-start;">
+<div style="flex:l; font-size:15px; width:70%; margin-top:20px; margin-bottom:20px; margin-right:40px;padding-left:40px;">
+<p style="font-size:20px; font-weight:bold;">
+Technical Support
+</p>
+<p>
+If you need technical support or have any feedback/review, please click the <b>Submit Now</b> button to submit a ticket, Our support team will check and reply to you within 1 to 2 working days. Please be patient as we make every effort to help you to resolve the issue. 
+<br> 
+Working Time: 9 AM - 6 PM GMT+8 (Monday to Friday)
+</p>
+</div>
+<div style="margin-top:94px;">
+<div id="service" style="display:flex; flex:r; background-color:#393939; color:white; text-align:center; font-size:20px; border-radius:20px;">
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://service.waveshare.com/">Submit Now</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 
+NewPP limit report
+Cached time: 20250313081040
+Cache expiry: 0
+Dynamic content: true
+Complications: []
+CPU time usage: 0.230 seconds
+Real time usage: 0.316 seconds
+Preprocessor visited node count: 627/1000000
+Post‐expand include size: 22196/2097152 bytes
+Template argument size: 3651/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5155/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   86.792      1 -total
+ 51.88%   45.030      4 Template:FAQ
+ 28.53%   24.766      1 Template:Infobox_item
+ 11.51%    9.994      1 Template:MLX90640_Thermal_Camera_manul
+  7.64%    6.631      1 Template:Amazon_nolink
+  6.99%    6.063      1 Template:Servicebox1
+-->
+</div></div>								<div class="printfooter">
+				Retrieved from "<a dir="ltr" href="https://www.waveshare.com/w/index.php?title=MLX90640-D55_Thermal_Camera&amp;oldid=89963">https://www.waveshare.com/w/index.php?title=MLX90640-D55_Thermal_Camera&amp;oldid=89963</a>"				</div>
+												<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden category: <ul><li><a href="https://www.waveshare.com/wiki/Category:I2C_interface" title="Category:I2C interface">I2C interface</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+			<!-- /bodyContent -->
+		</div>
+						</div>
+				</div>
+			</div>
+			<!-- /content -->
+
+			<!-- sidebar-left -->
+			<div class="sidebar-wrapper sidebar-left-wrapper">
+				<div class="sidebar-container container">
+					<div class="row">
+						<div id="sidebar-left" class="col-md-2 col-md-offset-0">
+							<div id="tweekiTOC"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading" style="display: table;"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none">
+<ul class="nav">
+<li class="toclevel-1 tocsection-1"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a>
+<ul class="nav">
+<li class="toclevel-2 tocsection-2"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Introduction"><span class="tocnumber">1.1</span> <span class="toctext">Introduction</span></a>
+<ul class="nav">
+<li class="toclevel-3 tocsection-3"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Features"><span class="tocnumber">1.1.1</span> <span class="toctext">Features</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Specification"><span class="tocnumber">1.1.2</span> <span class="toctext">Specification</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Hardware_Description"><span class="tocnumber">1.2</span> <span class="toctext">Hardware Description</span></a>
+<ul class="nav">
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Hardware_Connection"><span class="tocnumber">1.2.1</span> <span class="toctext">Hardware Connection</span></a></li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Interface"><span class="tocnumber">1.2.2</span> <span class="toctext">Interface</span></a></li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Application"><span class="tocnumber">1.2.3</span> <span class="toctext">Application</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Communication_Protocol"><span class="tocnumber">1.3</span> <span class="toctext">Communication Protocol</span></a></li>
+<li class="toclevel-2"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Dimensions"><span class="tocnumber">1.4</span> <span class="toctext">Dimensions</span></a></li>
+<li class="toclevel-2"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Other_Description"><span class="tocnumber">1.5</span> <span class="toctext">Other Description</span></a></li>
+<li class="toclevel-2"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Memory_and_registers"><span class="tocnumber">1.6</span> <span class="toctext">Memory and registers</span></a>
+<ul class="nav">
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Refresh_rate"><span class="tocnumber">1.6.1</span> <span class="toctext">Refresh rate</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Temperature_measurement_principle_and_measurement_distance"><span class="tocnumber">1.7</span> <span class="toctext">Temperature measurement principle and measurement distance</span></a>
+<ul class="nav">
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Temperature_measurement_principle"><span class="tocnumber">1.7.1</span> <span class="toctext">Temperature measurement principle</span></a></li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Measurement_distance"><span class="tocnumber">1.7.2</span> <span class="toctext">Measurement distance</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Examples"><span class="tocnumber">1.8</span> <span class="toctext">Examples</span></a>
+<ul class="nav">
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Raspberry_Pi_4B"><span class="tocnumber">1.8.1</span> <span class="toctext">Raspberry Pi 4B</span></a>
+<ul class="nav">
+<li class="toclevel-4"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Hardware_Connection_2"><span class="tocnumber">1.8.1.1</span> <span class="toctext">Hardware Connection</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Environment_Setting"><span class="tocnumber">1.8.2</span> <span class="toctext">Environment Setting</span></a>
+<ul class="nav">
+<li class="toclevel-4"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#C.2FC.2B.2B_Example"><span class="tocnumber">1.8.2.1</span> <span class="toctext">C/C++ Example</span></a></li>
+<li class="toclevel-4"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Python_Example"><span class="tocnumber">1.8.2.2</span> <span class="toctext">Python Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#STM32"><span class="tocnumber">1.8.3</span> <span class="toctext">STM32</span></a>
+<ul class="nav">
+<li class="toclevel-4"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Hardware_Connection_3"><span class="tocnumber">1.8.3.1</span> <span class="toctext">Hardware Connection</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#ESP32"><span class="tocnumber">1.8.4</span> <span class="toctext">ESP32</span></a>
+<ul class="nav">
+<li class="toclevel-4"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Hardware_Connection_4"><span class="tocnumber">1.8.4.1</span> <span class="toctext">Hardware Connection</span></a></li>
+<li class="toclevel-4"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Software_Installation"><span class="tocnumber">1.8.4.2</span> <span class="toctext">Software Installation</span></a></li>
+<li class="toclevel-4"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Operating_Steps"><span class="tocnumber">1.8.4.3</span> <span class="toctext">Operating Steps</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Resources"><span class="tocnumber">2</span> <span class="toctext">Resources</span></a>
+<ul class="nav">
+<li class="toclevel-2 tocsection-6"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Documents"><span class="tocnumber">2.1</span> <span class="toctext">Documents</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Demo_codes"><span class="tocnumber">2.2</span> <span class="toctext">Demo codes</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Software"><span class="tocnumber">2.3</span> <span class="toctext">Software</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Datasheet"><span class="tocnumber">2.4</span> <span class="toctext">Datasheet</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#FAQ"><span class="tocnumber">3</span> <span class="toctext">FAQ</span></a></li>
+<li class="toclevel-1 tocsection-11 active"><a href="https://www.waveshare.com/wiki/MLX90640-D55_Thermal_Camera#Support"><span class="tocnumber">4</span> <span class="toctext">Support</span></a></li>
+</ul>
+<div id="toctotop"><a href="javascript:scrollTo(0,0);">To Top</a></div></div></div>						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /sidebar-left -->
+					<!-- footer -->
+			<div id="footer" role="contentinfo" class="footer container footer-sticky bg-light" style="margin-top: 0px; opacity: 1;">
+			<ul id="footer-custom"><li class="dropup"><a href="https://www.waveshare.com/w/index.php?title=Special:UserLogin&amp;returnto=MLX90640-D55+Thermal+Camera" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o">Login / Create Account</a></li></ul><div style="clear:both"></div>			</div>
+			<!-- /footer -->
+		
+<script>
+var fbtFancyBoxOptions = {};
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.230","walltime":"0.316","ppvisitednodes":{"value":627,"limit":1000000},"postexpandincludesize":{"value":22196,"limit":2097152},"templateargumentsize":{"value":3651,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5155,"limit":5000000},"timingprofile":["100.00%   86.792      1 -total"," 51.88%   45.030      4 Template:FAQ"," 28.53%   24.766      1 Template:Infobox_item"," 11.51%    9.994      1 Template:MLX90640_Thermal_Camera_manul","  7.64%    6.631      1 Template:Amazon_nolink","  6.99%    6.063      1 Template:Servicebox1"]},"cachereport":{"timestamp":"20250313081040","ttl":0,"transientcontent":true}}});mw.config.set({"wgBackendResponseTime":774});});</script>	
+
+</body></html>
