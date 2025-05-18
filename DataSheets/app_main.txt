@@ -1,0 +1,33 @@
+#include "omron_esp32.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "esp_log.h"
+
+static const char *TAG = "OMRON_TEST";
+
+extern "C" void app_main(void) {
+    ESP_LOGI(TAG, "Starting Omron test...");
+
+    if (omron_i2c_init() != ESP_OK) {
+        ESP_LOGE(TAG, "Omron sensor I2C init failed.");
+        return;
+    }
+
+    // Optional I2C scan
+    omron_i2c_scan();
+
+    while (1) {
+        ESP_LOGI(TAG, "Reading thermal frame...");
+        esp_err_t ret = omron_read();
+
+        if (ret == ESP_OK) {
+            ESP_LOGI(TAG, "Read OK");
+        } else if (ret == ESP_ERR_INVALID_CRC) {
+            ESP_LOGW(TAG, "CRC check failed");
+        } else {
+            ESP_LOGE(TAG, "Read failed: %s", esp_err_to_name(ret));
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(1000));
+    }
+}
